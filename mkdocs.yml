@@ -1,0 +1,53 @@
+site_name: CosmoCoding
+site_description: Debugging and modern computing workflows for cosmology software
+site_url: https://lhior.github.io/CosmoCoding/
+repo_url: https://github.com/Lhior/CosmoCoding
+repo_name: Lhior/CosmoCoding
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  palette:
+    - scheme: default
+      primary: black
+      accent: teal
+  font:
+    text: Source Sans 3
+    code: JetBrains Mono
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - content.tabs.link
+    - content.action.edit
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - md_in_html
+  - tables
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Set Up VS Code: setup/vscode.md
+  - Use the Debugger: debugger/index.md
+  - RAIL: software/rail.md
+  - TXPipe: software/txpipe.md
+  - cobaya: software/cobaya.md
+  - cosmoSIS: software/cosmosis.md
+  - TreeCorr: software/treecorr.md
