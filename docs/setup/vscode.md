@@ -54,6 +54,14 @@ Practical advice:
 - If the real job needs a scheduler allocation, debug the same code path first on a login node or interactive node with a tiny input.
 - Keep environment activation steps reproducible. If you need modules plus conda, write them down once and reuse them.
 
+On SLURM-based HPC clusters, a short partial-node interactive allocation often looks like this:
+
+```bash
+salloc -p HENON -N 1 --ntasks=1 --cpus-per-task=8 --mem=32G -t 00:15:00
+```
+
+Treat that as a template rather than a universal command. The partition name, memory policy, wall time, and CPU layout vary by cluster, but the general idea is the same: request a small interactive allocation that is large enough to reproduce the bug and small enough to get quickly.
+
 ## Set Environment Variables Intentionally
 
 Many cosmology tools depend on environment variables such as data roots, plugin directories, or config directories. Put those in `launch.json` so the debugger run matches your shell run.
