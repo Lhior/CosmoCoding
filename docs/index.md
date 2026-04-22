@@ -1,5 +1,3 @@
-# CosmoCoding
-
 ## Start Here
 
 <div class="section-grid">
