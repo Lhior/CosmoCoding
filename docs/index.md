@@ -1,3 +1,7 @@
+---
+template: landing.html
+---
+
 ## Start Here
 
 <div class="section-grid">
