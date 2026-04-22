@@ -44,6 +44,7 @@ extra_css:
 
 nav:
   - Home: index.md
+  - General Tips: general-tips.md
   - Set Up VS Code: setup/vscode.md
   - arXiv: arxiv.md
   - Code Formatting: formatting.md
@@ -55,4 +56,5 @@ nav:
       - cobaya: software/cobaya.md
       - cosmoSIS: software/cosmosis.md
       - TreeCorr: software/treecorr.md
+
 
