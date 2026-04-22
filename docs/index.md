@@ -11,6 +11,7 @@
     </p>
     <div class="hero__actions">
       <a class="md-button md-button--primary" href="setup/vscode/">Set up VS Code</a>
+      <a class="md-button" href="formatting/">Set up formatting</a>
       <a class="md-button" href="debugger/">Learn the debugger</a>
       <a class="md-button" href="https://github.com/Lhior/CosmoCoding-examples">Browse the examples repo</a>
     </div>
@@ -24,12 +25,16 @@
     <h3>1. Set up VS Code</h3>
     <p>Install the right extensions, select the right interpreter, configure Remote-SSH, and make cluster work feel local.</p>
   </a>
+  <a class="topic-card" href="formatting/">
+    <h3>2. Keep formatting consistent</h3>
+    <p>Use Black, isort, and Flake8 so collaborators are not fighting over style in every pull request.</p>
+  </a>
   <a class="topic-card" href="debugger/">
-    <h3>2. Use the debugger well</h3>
+    <h3>3. Use the debugger well</h3>
     <p>Understand breakpoints, stepping, watches, exception handling, and how launch configurations control your runs.</p>
   </a>
   <a class="topic-card" href="software/rail/">
-    <h3>3. Apply it to real tools</h3>
+    <h3>4. Apply it to real tools</h3>
     <p>Each software page explains the usual entry point, the environment assumptions, and the debugger template to start from.</p>
   </a>
 </div>
@@ -76,5 +81,6 @@ This section adapts the recommendations in the original workspace notes so the l
 ### What To Read Next
 
 - [Set up VS Code](setup/vscode.md) for Remote-SSH, Copilot, interpreters, and practical cluster tips.
+- [Code Formatting](formatting.md) for Black, isort, Flake8, and format-on-save recommendations.
 - [Use the debugger](debugger/index.md) for breakpoints, watch expressions, and launch configuration anatomy.
 - [Companion examples repository](https://github.com/Lhior/CosmoCoding-examples) for intentionally buggy examples and `debugging.json` templates.
