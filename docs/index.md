@@ -13,6 +13,7 @@
       <a class="md-button md-button--primary" href="setup/vscode/">Set up VS Code</a>
       <a class="md-button" href="formatting/">Set up formatting</a>
       <a class="md-button" href="debugger/">Learn the debugger</a>
+      <a class="md-button" href="software/">Explore code examples</a>
       <a class="md-button" href="https://github.com/Lhior/CosmoCoding-examples">Browse the examples repo</a>
     </div>
   </div>
@@ -33,13 +34,13 @@
     <h3>3. Use the debugger well</h3>
     <p>Understand breakpoints, stepping, watches, exception handling, and how launch configurations control your runs.</p>
   </a>
-  <a class="topic-card" href="software/rail/">
+  <a class="topic-card" href="software/">
     <h3>4. Apply it to real tools</h3>
     <p>Each software page explains the usual entry point, the environment assumptions, and the debugger template to start from.</p>
   </a>
 </div>
 
-## Software Guides
+## Cosmology Code Examples
 
 <div class="section-grid">
   <a class="topic-card" href="software/rail/"><h3>RAIL</h3><p>Debug CLI-driven photometric redshift pipelines and config-heavy runs.</p></a>

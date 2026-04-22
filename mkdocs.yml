@@ -47,8 +47,11 @@ nav:
   - Set Up VS Code: setup/vscode.md
   - Code Formatting: formatting.md
   - Use the Debugger: debugger/index.md
-  - RAIL: software/rail.md
-  - TXPipe: software/txpipe.md
-  - cobaya: software/cobaya.md
-  - cosmoSIS: software/cosmosis.md
-  - TreeCorr: software/treecorr.md
+  - Cosmology Code Examples:
+      - Overview: software/index.md
+      - RAIL: software/rail.md
+      - TXPipe: software/txpipe.md
+      - cobaya: software/cobaya.md
+      - cosmoSIS: software/cosmosis.md
+      - TreeCorr: software/treecorr.md
+
