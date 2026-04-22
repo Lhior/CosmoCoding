@@ -45,6 +45,7 @@ extra_css:
 nav:
   - Home: index.md
   - Set Up VS Code: setup/vscode.md
+  - arXiv: arxiv.md
   - Code Formatting: formatting.md
   - Use the Debugger: debugger/index.md
   - Cosmology Code Examples:

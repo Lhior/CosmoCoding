@@ -82,6 +82,7 @@ This section adapts the recommendations in the original workspace notes so the l
 ### What To Read Next
 
 - [Set up VS Code](setup/vscode.md) for Remote-SSH, Copilot, interpreters, and practical cluster tips.
+- [arXiv](arxiv.md) for Zotero, RSS feeds, shared libraries, and an arXiv-reading workflow that scales beyond browser tabs.
 - [Code Formatting](formatting.md) for Black, isort, Flake8, and format-on-save recommendations.
 - [Use the debugger](debugger/index.md) for breakpoints, watch expressions, and launch configuration anatomy.
 - [Companion examples repository](https://github.com/Lhior/CosmoCoding-examples) for intentionally buggy examples and `debugging.json` templates.
