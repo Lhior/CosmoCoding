@@ -1,24 +1,5 @@
 # CosmoCoding
 
-<div class="hero">
-  <div class="hero__content">
-    <p class="hero__eyebrow">Modern computing tools for cosmologists</p>
-    <h1>Build a workflow that survives real pipelines, remote clusters, and long nights of debugging.</h1>
-    <p class="hero__lede">
-      CosmoCoding is a practical guide to setting up Visual Studio Code, using the debugger well,
-      and adapting those habits to cosmology software such as RAIL, TXPipe, cobaya, cosmoSIS,
-      and TreeCorr.
-    </p>
-    <div class="hero__actions">
-      <a class="md-button md-button--primary" href="setup/vscode/">Set up VS Code</a>
-      <a class="md-button" href="formatting/">Set up formatting</a>
-      <a class="md-button" href="debugger/">Learn the debugger</a>
-      <a class="md-button" href="software/">Explore code examples</a>
-      <a class="md-button" href="https://github.com/Lhior/CosmoCoding-examples">Browse the examples repo</a>
-    </div>
-  </div>
-</div>
-
 ## Start Here
 
 <div class="section-grid">
