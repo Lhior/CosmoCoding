@@ -25,6 +25,28 @@ The debugger only behaves predictably when the interpreter in VS Code matches th
 
 When a tool exposes a console entry point such as `rail-project`, `cobaya-run`, or `cosmosis`, that command must come from the same environment.
 
+### LSST Pipeline Environments
+
+For LSST pipeline users, a common friction point is that activating the conda environment is not always enough for VS Code sessions. If the environment still expects you to run `setup lsst_distrib` manually after activation, the debugger and integrated terminal can end up missing the LSST stack state you thought you had.
+
+One practical fix is to add an activation hook under `${CONDA_PREFIX}/etc/conda/activate.d/`. The filename does not matter. For example, you could create `lsst_activate.sh` with:
+
+```bash
+# Activate LSST pipeline
+if [[ ! ${EUPS_PATH} ]]; then
+  source ${CONDA_PREFIX}/etc/conda/activate.d/rubin-env-nosysroot_activate.sh
+fi
+
+# call eups setup to get all galsim stuff in the path
+{
+  setup lsst_distrib >/dev/null 2>&1
+} || {
+  echo "DM stack could not be activated!"
+}
+```
+
+After that, activating the environment should also perform the `lsst_distrib` setup step, which makes VS Code much easier to use because you no longer need to remember a separate manual `setup lsst_distrib` before running or debugging.
+
 ## Connect to a Cluster with Remote-SSH
 
 Use SSH keys first. Then teach VS Code how to connect.
