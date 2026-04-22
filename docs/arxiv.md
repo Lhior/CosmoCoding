@@ -61,6 +61,8 @@ An RSS feed is a machine-readable stream of updates from a source such as a jour
 
 For arXiv, RSS is a simple way to keep up with new submissions in the categories you care about.
 
+If you want a cross-device RSS reader in addition to Zotero, Inoreader is a strong option. It works well on both laptops and smartphones, which makes it convenient for skimming arXiv titles and abstracts when you are away from your desk. Zotero is better for turning papers into a managed bibliography and reading workflow, while Inoreader is useful when you want a lightweight mobile-friendly way to keep up with the daily stream.
+
 ## How arXiv Implements RSS
 
 arXiv provides RSS and Atom feeds for active subject areas. The feeds update daily at midnight Eastern time.
@@ -141,3 +143,5 @@ One practical routine is:
 5. let Overleaf pull from that curated library when you start writing.
 
 That is cleaner than using arXiv as a pile of browser tabs, and it scales much better when multiple collaborators are involved.
+
+If you prefer to do some of that first-pass scanning on a phone or tablet, Inoreader is a good companion tool for monitoring the same arXiv RSS feeds on a mobile device and then returning to Zotero when a paper is worth saving into a real library.
