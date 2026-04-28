@@ -29,7 +29,8 @@ This section adapts the original starter recommendations into a cleaner standalo
 
 ## What To Read Next
 
-- [Set up VS Code](setup/vscode.md) for Remote-SSH, Copilot, interpreters, and practical cluster tips.
+- [Set up VS Code](setup/vscode.md) for Remote-SSH, Copilot, and interpreter setup.
+- [Work on Perlmutter](hpc.md) for NERSC-specific Remote-SSH, Slurm, and compute-node utilization habits.
 - [arXiv](arxiv.md) for Zotero, RSS feeds, shared libraries, and an arXiv-reading workflow that scales beyond browser tabs.
 - [Code Formatting](formatting.md) for Black, isort, Flake8, and format-on-save recommendations.
 - [Use the debugger](debugger/index.md) for breakpoints, watch expressions, and launch configuration anatomy.

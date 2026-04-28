@@ -11,18 +11,22 @@ template: landing.html
   </a>
   <a class="topic-card" href="setup/vscode/">
     <h3>2. Set up VS Code</h3>
-    <p>Install the right extensions, select the right interpreter, configure Remote-SSH, and make cluster work feel local.</p>
+    <p>Install the right extensions, select the right interpreter, configure Remote-SSH, and make your editor predictable.</p>
+  </a>
+  <a class="topic-card" href="hpc/">
+    <h3>3. Work on Perlmutter</h3>
+    <p>Connect to NERSC, request right-sized Slurm jobs, and check whether compute nodes are actually busy.</p>
   </a>
   <a class="topic-card" href="formatting/">
-    <h3>3. Keep formatting consistent</h3>
+    <h3>4. Keep formatting consistent</h3>
     <p>Use Black, isort, and Flake8 so collaborators are not fighting over style in every pull request.</p>
   </a>
   <a class="topic-card" href="debugger/">
-    <h3>4. Use the debugger well</h3>
+    <h3>5. Use the debugger well</h3>
     <p>Understand breakpoints, stepping, watches, exception handling, and how launch configurations control your runs.</p>
   </a>
   <a class="topic-card" href="software/">
-    <h3>5. Apply it to real tools</h3>
+    <h3>6. Apply it to real tools</h3>
     <p>Each software page explains the usual entry point, the environment assumptions, and the debugger template to start from.</p>
   </a>
 </div>

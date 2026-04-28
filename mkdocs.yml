@@ -47,6 +47,7 @@ nav:
   - Home: index.md
   - General Tips: general-tips.md
   - Set Up VS Code: setup/vscode.md
+  - Work on Perlmutter: hpc.md
   - arXiv: arxiv.md
   - Code Formatting: formatting.md
   - Use the Debugger: debugger/index.md
