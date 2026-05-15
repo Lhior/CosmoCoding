@@ -59,16 +59,42 @@ Host nid??????
 
 ### VS Code Settings for Compute-Node Sessions
 
-NERSC also recommends two VS Code settings for compute-node sessions:
+NERSC also recommends a small set of VS Code user settings for compute-node sessions. Put these in your User Preferences JSON rather than in a workspace file so they apply to your Remote-SSH sessions in general.
+
+To open that file:
+
+- on Windows or Linux, open the Command Palette with `Ctrl+Shift+P`,
+- on macOS, open the Command Palette with `Cmd+Shift+P`,
+- then run `Preferences: Open User Settings (JSON)`.
+
+For Perlmutter-style remote work, a practical settings block is:
 
 ```json
 {
   "remote.SSH.maxReconnectionAttempts": 2,
-  "remote.SSH.useFlock": false
+  "remote.SSH.useFlock": false,
+  "remote.extensionKind": {
+    "*": ["ui"],
+    "github.copilot": ["ui"],
+    "github.copilot-chat": ["ui"]
+  },
+  "remote.SSH.enableWorkspaceFolderWatcher": false,
+  "remote.SSH.defaultExtensions": [],
+  "search.followSymlinks": false
 }
 ```
 
 The reconnection limit helps VS Code fail fast once an interactive allocation ends. The `useFlock` setting matters because Perlmutter compute nodes do not support file locking in the way VS Code expects for the mounted home directory.
+
+The `remote.extensionKind` block is the important one if you want to reduce memory pressure on the cluster. Setting an extension to `"ui"` tells VS Code to run that extension in the local UI-side extension host instead of the remote extension host on the login node or compute node. In practice, that shifts the extension's memory and CPU cost onto your laptop or desktop, which is usually the right trade when the remote side is a shared HPC environment. For tools like GitHub Copilot and Copilot Chat, `"ui"` mode is a good fit because they integrate with the editor UI and do not need to execute most of their work on the cluster.
+
+The remaining settings also reduce avoidable remote overhead:
+
+- `remote.SSH.enableWorkspaceFolderWatcher: false` avoids running the remote workspace file watcher, which can be noisy and expensive on large or network-mounted filesystems.
+- `remote.SSH.defaultExtensions: []` stops VS Code from automatically installing your usual local extensions into the remote host unless you explicitly choose to do that.
+- `search.followSymlinks: false` keeps search from walking through symlink-heavy trees, which is often the safer default on shared filesystems with large software stacks or mirrored directories.
+
+These settings do not eliminate the need for a real Slurm allocation when you need compute resources, but they do help keep editor convenience features from consuming memory and filesystem activity on Perlmutter unnecessarily.
 
 ### Perlmutter `sshproxy` and 24-Hour Keys
 
