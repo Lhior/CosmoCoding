@@ -143,6 +143,31 @@ salloc --nodes 1 --qos interactive --time 00:60:00 -C gpu -A m0000
 
 For CPU-only debugging, follow the same pattern but use `-C cpu` and the smallest wall time and resource request that actually reproduces the problem. Interactive jobs are still real compute jobs, so keep them short and intentional.
 
+### Use VS Code Tunnels from a Compute Node
+
+If Remote-SSH to the allocated `nid...` host is awkward in your environment, another workable option is to request the compute node first and start a VS Code tunnel from inside that allocation.
+
+The basic pattern is:
+
+1. Connect to `perlmutter.nersc.gov`.
+2. Request an interactive allocation, for example:
+
+```bash
+salloc --nodes 1 --qos interactive --time 00:60:00 -C cpu -A m0000
+```
+
+3. Once the shell is running on the allocated `nid...` compute node, start a tunnel there:
+
+```bash
+code tunnel
+```
+
+4. On your local machine, use the VS Code Tunnels extension to sign in and connect to that tunnel so the editor attaches directly to the compute node session.
+
+The reason to do it in this order is that `code tunnel` should be started from the actual compute-node shell, not from the login node, when your goal is to work against the compute environment directly. That way the VS Code server side of the session lives with the Slurm allocation you requested, and it disappears naturally when the allocation ends.
+
+This can be a useful fallback when SSH proxying to `nid...` hosts is inconvenient, but the same resource discipline still applies: start the tunnel only after you have the right-sized allocation, and expect the connection to end when the interactive job ends.
+
 ### Windows and WSL2 Workaround
 
 One practical Windows workflow is to run `sshproxy` inside WSL2 and then copy the resulting NERSC key files into the Windows `.ssh` directory that VS Code on Windows actually uses. This is useful when the WSL path is the easiest place to run the Unix-like `sshproxy` client, but Remote-SSH is running in the Windows VS Code process.
